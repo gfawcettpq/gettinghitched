@@ -1,4 +1,4 @@
-baseURL                          = "http://gettinghitched.fawcettfolk.com/"  # Your domain name. Must end with "/"
+baseURL                          = "https://gettinghitched.fawcettfolk.com/"  # Your domain name. Must end with "/"
 theme                            = "introduction"
 DefaultContentLanguage           = "en"                    # Default language for multilingual sites
 # disqusshortname                 = ""                       # https://gohugo.io/content-management/comments
