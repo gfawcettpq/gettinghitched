@@ -1,146 +1,70 @@
-baseurl = "/"
-languageCode = "en-us"
-title = "Strata"
-theme = "hugo-strata-theme"
-disqusShortname = "spf13"
-# Enable Google Analytics by inserting your tracking code
-googleAnalytics = ""
-# Define how many posts should appear on a site
-paginate = 10
+baseURL                          = "http://gettinghitched.fawcettfolk.com/"  # Your domain name. Must end with "/"
+theme                            = "introduction"
+DefaultContentLanguage           = "en"                    # Default language for multilingual sites
+# disqusshortname                 = ""                       # https://gohugo.io/content-management/comments
+# googleAnalytics                 = ""                       # https://gohugo.io/templates/internal/#google-analytics
 
 [params]
-	# To provide some metadata for search engines feel free to add a few
-    # information about you and your website.
-	name = "Your name"
-	description = "Describe your website"
+    themeStyle                   = "light"                 # Choose "light" or "dark"
+    favicon                      = "/img/fav.ico"          # Path to favicon file
+    showRSSButton                = false                   # Show rss button in navigation
+    fadeIn                       = true                    # Turn on/off the fade-in effect
+    fadeInIndex                  = false                   # Turn on/off the fade-in effect on the index page even if fade-in was otherwise turned off
+    dateFormat                   = "Jan 2, 2006"
+    email                        = "soontobe@fawcettfolk.com"   # E-mail address for contact section
+    # customCSS                    = ["foo.css"]             # Include custom css files placed under assets/
 
-	# Format dates with Go's time formatting
-	date_format = "2006-01-02"
+    # Configure the home page
+    [params.home]
+        introHeight              = "large"                 # Input either "medium" or "large" or "fullheight"
+        showLatest               = false                   # Show latest blog post summary
+        showAllPosts             = false                   # Set true to list all posts on home page, or set false to link to separate blog list page
+        numberOfProjectsToShow   = 3                       # Maximum number of projects to show on home page. Unset or comment out to show all projects
 
-	# Add custom assets with their paths relative to the static folder
-	custom_js   = []
-	custom_css  = []
+        localTime                = false                   # Show your current local time in contact section
+        timeZone                 = "America/Toronto"       # Your timezone as in the TZ* column of this list: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+    [params.projects]
+        useTwoColumns            = false                   # Use a layout with two columns instead of three
 
+    # Share buttons on blog post pages
+    [params.share]
+        twitter                  = false
+        facebook                 = false 
+        googlePlus               = false
+        pinterest                = false
 
-	[params.sidebar]
-		# Replace the avatar with a picture of your own under static/images
-		avatar = "avatar.jpg"
-		# Use Markdown to format the string. This works nearly all over the theme
-		bio = "**I'm Strata**, a super simple<br> responsive site template freebie<br> crafted by [HTML5 UP](//html5up.net)."
-		# The icons will be shown if you enter your username
-		twitter = "spf13"
-		github = "spf13"
-		dribbble = ""
-		facebook = ""
-		googleplus = ""
-		flickr = ""
-		linkedin = ""
-
-		copyright = [
-			"&copy; John Doe",
-			"Design: [HTML5 UP](//html5up.net)",
-			"Demo Images: [Unsplash](//unsplash.com/)"
-		]
-
-
-	[params.about]
-		hide  = false
-		title = "Ipsum lorem dolor aliquam ante commodo magna sed accumsan arcu neque."
-		content = "Accumsan orci faucibus id eu lorem semper. Eu ac iaculis ac nunc nisi lorem vulputate lorem neque cubilia ac in adipiscing in curae lobortis tortor primis integer massa adipiscing id nisi accumsan pellentesque commodo blandit enim arcu non at amet id arcu magna. Accumsan orci faucibus id eu lorem semper nunc nisi lorem vulputate lorem neque cubilia."
+    # Social icons appear in introduction and contact section. Add as many more as you like.
+    # Icon pack "fab" includes social network icons, see: https://fontawesome.com/icons?d=gallery&s=brands&m=free
+    # Icon pack "fas" includes solid style icons, see: https://fontawesome.com/icons?d=gallery&s=solid&m=free
+    # [[params.social]]
+    #    url   = "https://twitter.com/"
+    #    icon  = "twitter" # icon name without the 'fa-'
+    #    icon_pack = "fab"
 
 
-	[params.portfolio]
-		hide  = false
-		title = "Recent Work"
+# If you don't want to use the default menu, you can define one by yourself
+# [[menu.main]]
+#     name    = "Home"
+#     url     = "/"
+#     weight  = 0
+# [[menu.main]]
+#     name    = "Blog"
+#     url     = "/blog/"
+#     weight  = 1
 
-		# The images and thumbnails are stored under static/images
-		# Create and change subfolders as you like
-		[[params.portfolio.gallery]]
-			image = "fulls/01.jpg"
-			thumb = "thumbs/01.jpg"
-			title = "Lorem ipsum dolor."
-			description = "Lorem ipsum dolor sit amet."
+# We only use tag as a taxonomies
+# You can add more by yourself
+[taxonomies]
+  tag = "tags"
 
-		[[params.portfolio.gallery]]
-			image = "fulls/02.jpg"
-			thumb = "thumbs/02.jpg"
-			title = "Lorem ipsum dolor."
-			description = "Lorem ipsum dolor sit amet."
+[languages]
+    [languages.en]
+        languageName     = "English"
+        languageCode     = "en-us"
+        contentDir       = "content"
+        weight           = 0
+        title            = "Graeme & Katie"
+        [languages.en.params]
+            description  = "We're getting hitched"   # Max 160 characters show in search results
+            # footerText   = ""                      # Text to override default footer text (markdown allowed)
 
-		[[params.portfolio.gallery]]
-			image = "fulls/03.jpg"
-			thumb = "thumbs/03.jpg"
-			title = "Lorem ipsum dolor."
-			description = "Lorem ipsum dolor sit amet."
-
-		[[params.portfolio.gallery]]
-			image = "fulls/04.jpg"
-			thumb = "thumbs/04.jpg"
-			title = "Lorem ipsum dolor."
-			description = "Lorem ipsum dolor sit amet."
-
-		[[params.portfolio.gallery]]
-			image = "fulls/05.jpg"
-			thumb = "thumbs/05.jpg"
-			title = "Lorem ipsum dolor."
-			description = "Lorem ipsum dolor sit amet."
-
-		[[params.portfolio.gallery]]
-			image = "fulls/06.jpg"
-			thumb = "thumbs/06.jpg"
-			title = "Lorem ipsum dolor."
-			description = "Lorem ipsum dolor sit amet."
-
-	[params.recentposts]
-		hide  = false
-		title = "Recent blog posts"
-
-	[params.contact]
-		hide  = false
-		title = "Get In Touch"
-		content = "Accumsan pellentesque commodo blandit enim arcu non at amet id arcu magna. Accumsan orci faucibus id eu lorem semper nunc nisi lorem vulputate lorem neque lorem ipsum dolor."
-
-		address = [
-			"1234 Somewhere Rd.",
-			"Nashville, TN 00000",
-			"United States"
-		]
-		phone = "000-000-0000"
-
-		# Since this template is static, the contact form uses www.formspree.io as a
-		# proxy. The form makes a POST request to their servers to send the actual
-		# email. Visitors can send up to a 1000 emails each month for free.
-	    #
-	    # What you need to do for the setup?
-	    #
-	    # - set your email address under 'email' below
-	    # - upload the generated site to your server
-	    # - send a dummy email yourself to confirm your account
-	    # - click the confirm link in the email from www.formspree.io
-	    # - you're done. Happy mailing!
-		email = "hello@example.com"
-
-		[params.contact.form]
-			# Set custom strings for the form if your native
-			# language isn't English
-			name = "Name"
-			email = "Email"
-			message = "Message"
-			submit = "Send message"
-
-
-# Menu links that appear on the left sidebar
-[[menu.main]]
-	name = "Home"
-	url  = "/"
-	weight = 0
-
-[[menu.main]]
-	name = "About"
-	url  = "about"
-	weight = 5
-
-[[menu.main]]
-	name = "Blog"
-	url  = "post/"
-	weight = 10
