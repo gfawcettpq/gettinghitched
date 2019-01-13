@@ -4,7 +4,7 @@ image: "hotel_bed.jpg"
 weight: 4
 ---
 We have booked a discounted block of rooms for both Friday, April 26th and Saturday, April 27th for our out of town friends and family.
-Please contact the hotel no later than March 27th and let them know you are attending the Fawcett - Sullivan wedding.\
+Please contact the hotel no later than Wednesday, March 27th and let them know you are attending the Fawcett - Sullivan wedding.\
 \
 #### Comfort Inn
 2955 Dougall Ave\
